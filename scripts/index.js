@@ -1,6 +1,7 @@
 const addButton = document.getElementById("addButton");
 
-const addTask = () => {
+const addTask = (event) => {
+  event.preventDefault();
   const task = `☐ ${document.getElementById("task").value}`;
   const newTask = document.createElement("LI");
   const newTaskText = document.createTextNode(task);
