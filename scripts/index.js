@@ -14,8 +14,10 @@ const checkTask = (event) => {
   event.preventDefault();
 
   if (event.target.innerText[0] === "☐") {
+    event.target.style.textDecoration = "line-through";
     event.target.innerText = event.target.innerText.replace("☐", "☑︎");
   } else {
+    event.target.style.textDecoration = "none";
     event.target.innerText = event.target.innerText.replace("☑︎", "☐");
   }
 };
