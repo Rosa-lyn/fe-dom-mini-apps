@@ -3,11 +3,14 @@ const addButton = document.getElementById("addButton");
 const addTask = (event) => {
   event.preventDefault();
   const task = `☐ ${document.getElementById("task").value}`;
-  const newTask = document.createElement("LI");
-  const newTaskText = document.createTextNode(task);
-  newTask.appendChild(newTaskText);
-  newTask.addEventListener("click", checkTask);
-  document.getElementById("toDoList").appendChild(newTask);
+
+  if (task.length > 2) {
+    const newTask = document.createElement("LI");
+    const newTaskText = document.createTextNode(task);
+    newTask.appendChild(newTaskText);
+    newTask.addEventListener("click", checkTask);
+    document.getElementById("taskList").appendChild(newTask);
+  }
 };
 
 const checkTask = (event) => {
