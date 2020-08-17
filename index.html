@@ -10,16 +10,22 @@
 </head>
 
 <body>
-    <h1>To-Dos</h1>
+    <div id="container">
 
-    <form>
-        <input type="text" value="add a to-do..." id="task">
-        <input type="submit" value="Add" id="addButton">
-    </form>
+        <header>
+            <h1>To - Do</h1>
+            <form>
+                <input type="text" placeholder="add a to-do..." id="task">
 
-    <ul id="toDoList">
+                <input type="submit" value="+" id="addButton">
+            </form>
+        </header>
+        <main>
+            <ul id="toDoList">
+            </ul>
+        </main>
 
-    </ul>
+    </div><!-- container end -->
 </body>
 
 </html>
